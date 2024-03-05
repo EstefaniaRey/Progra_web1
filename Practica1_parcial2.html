@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Venta en linea</title>
+
+</head>
+<body>
+	<h1 align="center">Ventas en linea</h1>
+
+	<form>
+		<fieldset>
+			<legend >Informacion General</legend>
+			<table align="center">
+			<tr>
+				<td><label for="usuario">Nombre:</label></td>
+				<td><label for="usuario">Apellido paterno:</label></td>
+				<td><label for="usuario">Apellido materno:</label></td>
+			
+			</tr>
+
+			<tr>
+			<td><input type="text" name="usuario" id="usuario" size="20" maxlength="20" title="Nombre" placeholder="Nombre"></td>
+			<td><input type="text" name="usuario" id="usuario" size="20" maxlength="20" title="Apellido paterno" placeholder="Apellido paterno"></td>
+			<td><input type="text" name="usuario" id="usuario" size="20" maxlength="20" title="Apellido materno " placeholder="Apellido materno"></td>
+			</tr>
+
+			<tr>
+				<td><label for="usuario">Nombre de usuario:</label></td>
+				<td><label for="pass">Contraseña:</label></td>
+				<td><label for="fechan">Fecha de nacimiento</label></td>
+			</tr>
+
+			<tr>
+				<td><input type="text" name="usuario" id="usuario" size="20" maxlength="20" title="Nombre del usuario" placeholder="Nombre del usuario"></td>
+				<td><input type="password" name="pass" id="pass" size="20" maxlength="20" title="Password" placeholder="Password"></td>
+				<td><input type="date" name="fecha" id="fecha" size="20" maxlength="20">
+
+			</tr>
+
+		</table>
+		</fieldset>
+
+		<fieldset>
+			<legend size="50px">Formas de Facturación</legend>
+			<table align="center">
+				<tr>
+					<td><label for="Pais">Pais:</label></td>
+					<td><label for="Ciudad">Ciudad:</label></td>
+					<td><br/><br/><label for="Calle">Calle:</label></td>	
+					
+				</tr>
+
+				<tr>
+					<td><select size="5"><!--multiple para seleccionar varioas -->
+						<optgroup label="Pais">
+						<option value="1" selected>Australia</option><!--selected para que la opcion este seleccionada -->
+						<option value="2">Argentina</option>
+						<option value="3">Alemania</option>
+						<option value="4">Brasil</option>
+						<option value="5">Belgica</option>
+						<option value="6">Colombia</option>
+						<option value="7">Canada</option>
+						<option value="8">Chile</option>
+						<option value="9">España</option>
+						<option value="10">E.U.A</option>
+						<option value="11">Mexico</option>
+						</optgroup>
+					</select></td>
+					<td><select size="5"><!--multiple para seleccionar varioas -->
+						<optgroup label="Ciudad">
+						<option value="1" selected>Ciudades de México</option><!--selected para que la opcion este seleccionada -->
+						<option value="2">Cancun</option>
+						<option value="3">Ciudad Valles</option>
+						<option value="4">Guadalajara</option>
+						<option value="5">Guanajuato</option>
+						<option value="6">Querétaro</option>
+						<option value="7">Puebla</option>
+						<option value="8">San luis potosi</option>
+						</optgroup>
+					</select></td>
+					<td><input type="Calle" name="Calle" id="Calle" size="20" maxlength="20" title="Calle" placeholder="Calle"></td>
+				</tr>
+
+				<tr>
+					<td><label for="Número de casa">Número de Casa:</label></td>
+					<td><label for="Colonia">Colonia:</label></td>
+					<td><label for="Correo">E-mail:</label></td>	
+				</tr>
+				<tr>
+					<td><input type="Número" name="Número de casa" id="Número de casa" size="20" maxlength="20" title="Número de casa" placeholder="Número exterior"></td>
+					<td><input type="Colonia" name="Colonia" id="Colonia" size="20" maxlength="20" title="Colonia" placeholder="Colonia"></td>
+					<td><input type="email" name="Correo" id="Correo" size="20" maxlength="20" title="E-mail " placeholder="E-mail"></td>
+				</tr>
+
+				<tr>
+					<td><label for="Número de casa">R.F.C:</label></td>
+					<td><label for="Colonia">C.P:</label></td>
+				</tr>
+				<tr>
+					<td><input type="Número" name="Número de casa" id="Número de casa" size="20" maxlength="20" title="Número de casa" placeholder="Número de casa"></td>
+					<td><input type="Codigo" name="Codigo" id="Codigo" size="20" maxlength="20" title="Codigo postal" placeholder="Codigo postal"></td>
+				</tr>
+
+				<tr align="center">
+					<td align="right"><input type="submit" name="enviar" id="enviar" value="Enviar"></td>
+					<td ><input type="reset" name="restablecer" id="restablecer" value="Restablecer"></td>
+					
+				</tr>
+
+			</table>	
+		</fieldset>
+	</form>
+</body>
+</html>
