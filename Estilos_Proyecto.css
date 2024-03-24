@@ -1,0 +1,43 @@
+
+header h1{
+    color: #4a2285;
+
+}
+h2 {
+    color: #895d99;
+}
+
+h3 {
+    color: #895d99;
+}
+
+p{
+    font-family: seriously;
+    font-size: 18px;
+    color: black;
+}
+
+*{
+    margin: 10px 20px 15px 20px;/*sup,der,inf,izq*/
+}
+.Impacto{
+    margin: 0;
+    width: 95%;
+    display: flex;
+
+}
+.caja{
+    width: 25%;
+    height: 25%;
+    color: azure;
+}
+.caja-1{
+    
+    position: relative;
+    height: 70%;
+    width: 70%;
+}
+.caja-2{
+    position: relative;
+    z-index: 1;
+}
