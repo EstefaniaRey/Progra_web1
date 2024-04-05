@@ -2,17 +2,6 @@ body {
 	font-family: 'Dyna Puff';
 }
 
-/*div{
-	width: 200px;
-	height: 50px;
-	background-color: orangered;
-	padding: 10px;
-	font-family: cartun;
-	border-radius: 50px;
-	text-align: center;
-	position: center;
-}*/
-
 .texto {
 	padding: ;
 	width: 400px;
@@ -45,15 +34,6 @@ body {
 
 }
 
-/*.texto:visited{
-	color: #E76558;
-	background-color: #089389;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	box-shadow: #C6ACE7 10px 10px 20px;
-	-moz-box-shadow: #C6ACE7 10px 10px 20px;
-	-webkit-box-shadow: #C6ACE7 10px 10px 20px;
-}*/
 .texto:focus{
 	text-decoration: none;
 }
