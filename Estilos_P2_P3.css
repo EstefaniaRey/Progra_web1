@@ -28,7 +28,7 @@ div{
 }
 
 input[type="text"] {
-    width: 650px;
+    width: 95%;
     height: 30px;
     padding: 5px;
     margin-bottom: 10px;
@@ -37,7 +37,7 @@ input[type="text"] {
 input[type="submit"] {
     padding: 5px 10px;
     background-color: #FA77F8;
-    width: 663px;
+    width: 95%;
     height: 30px;
     color: #fff;
     border: none;
