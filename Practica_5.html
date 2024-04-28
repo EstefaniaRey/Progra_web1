@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilosP5.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=6;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==30)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total>15 && total<30)
+        		document.getElementById("comentario").innerHTML="Regular"
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Ponte a Estudiar";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(174, 123, 243);
+doc.text(45, 20, "Cultura General");
+doc.setTextColor(240, 159, 253); //Color en formato RGB
+doc.setFontSize(20);
+doc.text(60, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "30 puntos. Exelente. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "20 puntos. Bien. \r Obtuviste 4 respuestas correctas");
+doc.text(20, 90, "10 puntos. Mal\r obtubiste 2 respuestas correctas ")
+doc.text(20, 110, "0 puntos. Muy Mal\r Todas tus respuestas son incorrectas");
+
+doc.setTextColor(240, 159, 253); //Color en formato RGB
+doc.setFontSize(20);
+doc.text(50, 145, "Respuestas correctas"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 160, "¿Cuál es el país más grande del mundo? \r  Respuesta: Rusia");
+doc.text(20, 180, "¿Cuál es el río más largo del mundo? \r  Respuesta: El Rio Amazonas");
+doc.text(20, 200, "¿Quién pinto La Mona Lisa?l\r  Respuesta: Leonardo Davinci ")
+doc.text(20, 220, "¿Cuándo acabó la II Guerra Mundial?\r  Respuesta: En 1945");
+doc.text(20, 240, "¿Cuál es el órgano más grande del cerpo humano?\r  Respuesta: La piel");
+doc.text(20, 260, "¿Cuántos sentidos tiene el ser humano??\r  Respuesta: 5 sentidos");
+
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Averigua cuanto sabes de cultura general</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>¿Cuál es el país más grande del mundo?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>Rusia<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Australia<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>China<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Brasil 4<br/><br/>
+		
+		<li>¿Cuál es el río más largo del mundo?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>El Rio Yangtsé<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>El Rio Amazonas<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>El RIo Amarillo<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>El Rio Nilo<br/><br/>
+
+		<li>¿Quién pinto "La Mona Lisa"?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Leonardo Dicaprio<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Pablo Picasso<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Leonardo Davinci<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Miguel de Cervantes<br/><br/>
+
+        <li>¿Cuándo acabó la II Guerra Mundial?</li>
+		<input type="radio" name="r4" id="r4" value="5"/>En 1945<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>En 1968<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>En 1845<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>En 1868<br/><br/>
+
+		<li>¿Cuál es el órgano más grande del cerpo humano?</li>
+		<input type="radio" name="r5" id="r5" value="0"/>El Cerebro<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>El Corazon<br/>
+		<input type="radio" name="r5" id="r5" value="5"/>La piel<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>La lengua<br/><br/>
+
+		<li>¿Cuántos sentidos tiene el ser humano?</li>
+		<input type="radio" name="r6" id="r6" value="0"/>8 sentidos<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>4 sentidos<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>6 sentidos<br/>
+		<input type="radio" name="r6" id="r6" value="5"/>5 sentidos<br/><br/>
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
