@@ -2,7 +2,7 @@
 if(isset($_POST['submit'])) 
 {
 
-	$para = "imelda.hernandez@upslp.edu.mx"; 
+	$para = "185319@upslp.edu.mx"; 
 	$asunto = "Enviando informacion";
 	$nombre = $_POST['nombre'];
 	$correo = $_POST['email'];
