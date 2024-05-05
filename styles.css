@@ -1,0 +1,51 @@
+body{
+  background-color: #C9F4EF;
+}
+.carousel {
+  position: relative;/*posicionar correctamente los elementos*/
+  max-width: 600px;/* Ancho  de 600px máximo del carrusel */
+  margin: auto; /* Centra el carrusel en la pagina*/
+  overflow: hidden; /* Oculta las diapositivas que no están en active */
+  border: 2px solid #7EF8EA; /* Borde del carrusel */
+  border-radius: 8px; /*Redondea la esquinas del carrusel*/
+}
+
+/* Estilos para el contenido del carrusel */
+.carousel-content {
+  display: flex; /* Establece el contenedor de las diapositivas como un contenedor flexible */
+}
+/* Estilos para las imágenes dentro del carrusel */
+.carousel-content img {
+  width: 100%; /*Ancho de la imagen al 100% con el ancho del contenedor*/
+  display: none;/* Oculta las imagenes que no están en active */
+}
+
+.carousel-content img.active {
+  display: block;/* Muestra las imagenes que esta en active */
+}
+
+button {
+  position: absolute;/*Etablese una posicion absolita en los botones*/
+  top: 50%;/* Coloca los botones ala mitad del carrusel */
+  transform: translateY(-50%);/* Centra verticalmente los botones */
+  background: rgba(0, 0, 0, 0.5);/* Color de fondo transparentoso para los botones */
+  color: white;/* Color del texto de los botones */
+  border: none; /*Le quita el borde a los botones*/
+  padding: 10px;/*Añade espacio en los botones*/
+  cursor: pointer;/*se cambia la flecha cuando se coloca el cursor en los botones*/
+  font-size: 20px;/*Tamaño de fuente de los botones*/
+  border-radius: 50%;/*Se redonden las esquinas de los botosnes*/
+}
+/* Estilos para los botones al pasar el ratón sobre ellos */
+button:hover {
+  background: rgba(0, 0, 0, 0.8); /* Cambio de color al pasar el ratón */
+}
+/* Estilos específicos para el botón de navegación previa */
+#prevBtn {
+  left: 0;/*Coloca el boton en el borde izquierdo*/
+}
+
+#nextBtn {
+  right: 0;/*Coloca el otro boton en el borde derecho del carrusel*/
+}
+
