@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    background-image: url('imagenes_proyecto/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+ h1{
+    font-family: "League Gothic", Helvetica, serif;
+    font-size: 7vmin;
+    color: whitesmoke;
+  }
+.menu{
+    position: absolute;
+    font-family: "League Gothic", Helvetica, serif;
+    font-size: 5vmin;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: min-content;
+}
+li{
+    list-style: none;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: whitesmoke;
+    padding: .5rem 0;
+    transform: scale(.95);
+    opacity: .25;
+    transition: scale 550ms linear, opacity 250ms linear;
+}
+.menu a:first-of-type{
+    transform: scale(1);
+    opacity: 1;
+}
+.menu:hover a:not(:hover){
+    transform: scale(.95);
+    opacity: .25;
+}
+.menu a:hover{
+    transform: scale(1);
+    opacity: 1;
+}

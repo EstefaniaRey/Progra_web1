@@ -1,0 +1,14 @@
+body{
+	background-image: url("imagenes_proyecto/portada.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+	margin: 40% 40% 60% 30%;
+}
+h1{
+	color: white;
+	background-position: center;
+	background-attachment: fixed;
+}

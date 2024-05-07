@@ -1,60 +1,33 @@
-
-header h1{
-    color: #4a2285;
-
-}
 body{
-    background-image: url(imagenes_proyecto/fondo1.jpg);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: black;
+    background-image: linear-gradient(to right, black,rgb(54, 54, 54));
 }
-h2 {
-    color: #895d99;
+h1{
+    text-align: center;
+    color: aqua;
 }
-
-h3 {
-    color: #895d99;
+aside{
+    background-color: red;
 }
-
-p{
-    font-family: seriously;
-    font-size: 18px;
-    color: black;
-    margin: 10px 20px 15px 20px;/*sup,der,inf,izq*/
-}
-
-*{
-    margin: 10px 20px 15px 20px;/*sup,der,inf,izq*/
-}
-main{
-    position: relative;
-}
- video{
-    width: 28%;
-    height: 200px;
- }
-.Impacto{
-    margin: 0;
-    width: 95%;
+section{
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-
+    width: 800px;
+    height: 430px;
 }
-.caja{
-    width: 25%;
-    height: 25%;
-    color: azure;
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
 }
-.caja-1{
-    
-    position: relative;
-    height: 70%;
-    width: 70%;
-}
-.caja-2{
-    position: relative;
-    z-index: 1;
+section img:hover{
+    cursor: crosshair;
+    width: 400px;
+    opacity: 1;
+    filter: contrast(120%);
 }
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css); 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
