@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #B589F8;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Estilos para formulario de contacto */
+form {
+  background-color: #B589F8;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form label {
+display: block;
+margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #905AE2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #7C4BC6;
+}

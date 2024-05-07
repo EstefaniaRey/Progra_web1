@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    background-image: url(fondo1.jpg);
+    background-size: cover;
+
+}
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  
+  form {
+    background-color: rgb(80, 80, 255);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  form label {
+  display: block;
+  margin-bottom: 5px;
+  }
+  
+  form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #cajadatos{
+    color: antiquewhite;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
