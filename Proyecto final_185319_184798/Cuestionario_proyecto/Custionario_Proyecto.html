@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="Estilos_Cuestionario.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+var total;
+function califica()
+    {
+    	var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==50){
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        }
+        else
+        	if(total==35){
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        }
+        else
+        	if(total>=20 && total <= 30){
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+		}
+        else
+        	if (total <= 15){
+        		document.getElementById("comentario").innerHTML="Ponte a estudiar";
+        	}
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(77, 243, 173);
+doc.text(30, 20, "Computación Cuantica");
+doc.setTextColor(175, 243, 77); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(40, 40, "Resultados del Cuestionario"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "50 puntos. Muy bien. \r Todas tus respuestas son correctas ");
+doc.text(20, 70, "40 puntos. Bien. \r Obtuviste 8 preguntas correctas");
+doc.text(20, 90, "25 puntos. Regular. \r Obtuviste 5 preguntas correctas. \r ponte a estudiar un poco mas. :)");
+doc.text(20, 110, "0 puntos. Mal\r Todas tus respuestas son incorrectas :( \r Puedes checar la informacion de nuestra pagina para estudiar un poco mas.");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Computacion Cuantica</h1>
+	<h2>Descubre cunto aprendiste sobre la computacion Cuantica</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>¿Que es la computacion cuantica ?</li>
+		<input type="radio" name="r1" id="r1" value="0"/>En los equipos clásicos, los bits se corresponden con los niveles de voltaje en los circuitos de silicona. El hardware de computación cuántica se puede implementar mediante diferentes materializaciones físicas de qubits: iones atrapados, superconductores, átomos neutros, espines de electrones, polarización ligera o qubits topológicos.<br/>
+		<input type="radio" name="r1" id="r1" value="5"/>Una misma tarea puede tener diferente complejidad en computación clásica y en computación cuántica, lo que ha dado lugar a una gran expectación, ya que algunos problemas intratables pasan a ser tratables. Mientras que un computador clásico equivale a una máquina de Turing,1​ un computador cuántico equivale a una máquina de Turing cuántica<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>La computación cuántica es un paradigma de computación distinto al de la computación clásica. Se basa en el uso de cúbits en lugar de bits, y da lugar a nuevas puertas lógicas que hacen posibles nuevos algoritmos.<br/><br/>
+		
+		<li>¿Qué es un ordenador cuántico?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Un dispositivo que utiliza los principios de la mecánica cuántica para realizar cálculos.<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Un tipo de computadora que almacena datos en bits cuánticos, o qubits.<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Una computadora que puede resolver problemas que son imposibles de resolver para las computadoras clásicas.<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>Todas las respuestas anteriores son correctas.<br/><br/>
+
+		<li>¿En que año se crea el primero ordenador cuantico?</li>
+		<input type="radio" name="r3" id="r3" value="5"/>En 1990<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>En el 2000<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>En el 2004<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>En 1998<br/><br/>
+
+        <li>¿Que es un "qubit"?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Una agrupacion de 4 bits<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>El estado de un bit<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Una arupacion de 4 bytes<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Un qubit es la unidad de información cuántica compuesta por 2 características de la física cuántica.<br/><br/>
+
+		<li>¿Cuales son las dos propiedad cuánticas de un "qubit"?</li>
+		<input type="radio" name="r5" id="r5" value="5"/>superposición cuántica y entrelazamiento cuantico<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Relatividad y Superposicion de estado<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Doble estado y relatividad<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Doble estado y re-Actividad cuantica<br/><br/>
+
+		<li>¿Cuál es el nombre del primer ordenador cuántico comercialmente disponible?</li>
+		<input type="radio" name="r6" id="r6" value="0"/>D-Wave 2<br/>
+		<input type="radio" name="r6" id="r6" value="5"/>IBM Q System One<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Macintosh<br/>
+		<input type="radio" name="r6" id="r6" value="0"/> Microsoft Azure Quantum<br/><br/>
+
+		<li>¿En qué área se espera que la computación cuántica tenga un mayor impacto?</li>
+		<input type="radio" name="r7" id="r7" value="0"/>Medicina: Desarrollo de nuevos medicamentos y terapias, diagnóstico de enfermedades y simulación de sistemas biológicos.<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>Materiales: Diseño de nuevos materiales con propiedades avanzadas, como superconductores y baterías más eficientes.<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>Inteligencia artificial: Desarrollo de algoritmos de aprendizaje automático más potentes y eficientes.<br/>
+		<input type="radio" name="r7" id="r7" value="5"/>Todas las áreas mencionadas anteriormente.<br/><br/>
+
+		<li>¿Cuales empresas están estudiando la computación cuántica en la actualidad?</li>
+		<input type="radio" name="r8" id="r8" value="0"/>MIT, QuatumEnterprise y intel<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Amazon, Nasa y Apple<br/>
+		<input type="radio" name="r8" id="r8" value="5"/>Google. Ibm y Microsoft<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Sony, HP y LG<br/><br/>
+
+		<li>¿Cuál de las siguientes afirmaciones sobre el futuro de la computación cuántica es más probable?</li>
+		<input type="radio" name="r9" id="r9" value="0"/>Las computadoras cuánticas se utilizarán para resolver problemas específicos que son demasiado difíciles para las computadoras clásicas.<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>La computación cuántica aún es una tecnología experimental y es demasiado pronto para decir cuál será su impacto en el futuro.<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Las computadoras cuánticas reemplazarán por completo a las computadoras clásicas en el futuro.<br/>
+		<input type="radio" name="r9" id="r9" value="5"/> La computación cuántica tendrá un impacto significativo en muchas industrias, pero no reemplazará por completo a la computación clásica.<br/><br/>
+
+		<li>¿Cuál de las siguientes afirmaciones sobre la computación cuántica es falsa?</li>
+		<input type="radio" name="r10" id="r10" value="5"/>Las computadoras cuánticas son mucho más rápidas que las computadoras clásicas para todos los tipos de problemas.<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Las computadoras cuánticas todavía están en una fase temprana de desarrollo.<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>La computación cuántica tiene el potencial de revolucionar muchas industrias.<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Los gobiernos y las empresas de todo el mundo están invirtiendo heavily en investigación y desarrollo de computación cuántica.<br/>
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
