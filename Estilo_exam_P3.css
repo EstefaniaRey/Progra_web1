@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+body{
+    text-align: center;
+    margin: 15% 30%;
+    background-color: white;
+}
+form{
+    background-color: #E2F2CB;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+label{
+    font-family: "Danfo", serif;
+    font-size: 30px;
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.boton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton:hover {
+    background-color: #45a049;
+}
+
+p{
+    font-family: "Sombras en luz", cursive;
+}
+#resultado {
+    font-size: 18px;
+    color: #333333;
+    margin-top: 20px;
+}
