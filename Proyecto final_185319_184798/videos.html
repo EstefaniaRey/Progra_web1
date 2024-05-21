@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="estilos_video.css">
+    <title>Document</title>
+</head>
+<body>
+	<header>
+		<h1>Galeria de vídeos</h1>
+	</header>
+	<div class="area"></div><nav class="main-menu">
+        <ul>
+            <li>
+                <a href="Proyecto_Final.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                       pagina principal
+                    </span>
+                </a>
+              
+            </li>
+            <li class="has-subnav">
+                <a href="galeria de memes.html">
+                    <i class="fa fa-globe fa-2x"></i>
+                    <span class="nav-text">
+                        Galeria de memes
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="Cuestionario_proyecto/Custionario_Proyecto.html">
+                   <i class="fa fa-comments fa-2x"></i>
+                    <span class="nav-text">
+                        cuestionario
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-camera-retro fa-2x"></i>
+                    <span class="nav-text">
+                        preguntas frecuentes
+                    </span>
+                </a>
+               
+            </li>
+            <li>
+                <a href="videos.html">
+                    <i class="fa fa-film fa-2x"></i>
+                    <span class="nav-text">
+                        galeria de videos
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="Formulario_contacto.html">
+                    <i class="fa fa-book fa-2x"></i>
+                    <span class="nav-text">
+                       formulario contacto
+                    </span>
+                </a>
+            </li>
+			<!-- <li>
+               <a href="#">
+                   <i class="fa fa-cogs fa-2x"></i>
+                    <span class="nav-text">
+                        Tools & Resources
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a href="#">
+                    <i class="fa fa-map-marker fa-2x"></i>
+                    <span class="nav-text">
+                        Member Map
+                    </span>
+                </a>
+            </li>-->
+            
+            <li>
+                <a href="menu.html">
+                   <i class="fa fa-info fa-2x"></i>
+                    <span class="nav-text">
+                        return menu
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="logout">
+            <li>
+               <a href="#">
+                     <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Logout
+                    </span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+    <div class="contenedor">
+		<div class="row">
+			<div class="col">
+				<div class="future-img">
+					<img src="imagenes_proyecto/min1.jpg" alt="reproducir video" width="100%">
+					<img src="imagenes_proyecto/play-button-icon-png-12.png" class="play" onclick="playVid('videos_proyecto/video_principla.mp4')">
+				</div>
+			</div>
+			<div class="col">
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="imagenes_proyecto/min.2.jpg" alt="reproducir video">
+						<img src="imagenes_proyecto/play-button-icon-png-12.png" class="play" onclick="playVid('videos_proyecto/video1.mp4')">
+					</div>
+					<p>que es la computación cuantica???<br>descripción aqui</p>
+				</div>
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="imagenes_proyecto/min3.jpg" alt="reproducir video">
+						<img src="imagenes_proyecto/play-button-icon-png-12.png" class="play" onclick="playVid('videos_proyecto/video2.mp4')">
+					</div>
+					<p>que es la computación cuantica???<br>descripción aqui</p>
+				</div>
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="imagenes_proyecto/min4.jpg" alt="reproducir video">
+						<img src="imagenes_proyecto/play-button-icon-png-12.png" class="play" onclick="playVid('videos_proyecto/video3.mp4')">
+					</div>
+					<p>que es la computación cuantica???<br>descripción aqui</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="reproductor" id="reproducir">
+		<video width="100%" controls id="myvideo">
+			<source src="videos_proyecto/video principla.mp4" type="video/mp4">
+		</video>
+		<img src="imagenes_proyecto/R.png" class="pause" onclick="stop()">
+	</div>
+    <script>
+
+        var reproducir= document.getElementById("reproducir");
+        var video= document.getElementById("myvideo");
+
+        function stop(){
+            reproducir.style.display="none";
+        }
+        function playVid(file){
+            video.src=file;
+            reproducir.style.display="block";
+        }
+    </script>
+
+</body>
+</html>

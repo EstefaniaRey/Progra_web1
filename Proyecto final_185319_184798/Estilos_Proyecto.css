@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-header h1{
-    color: #4a2285;
-
+.text{
+    font-family: "Anton", sans-serif;
+    font-size: 70px;
+    background: url(imagenes_proyecto/titulo_eee.jpg);
+    width: fit-content;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 body{
     background-image: url(imagenes_proyecto/fondo1.jpg);
@@ -11,17 +22,34 @@ body{
     background-size: cover;
 }
 h2 {
-    color: #895d99;
+    color: #A85CF9;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 h3 {
-    color: #895d99;
+    color: #A85CF9;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+ul{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #E1F7F5;  
 }
 
 p{
-    font-family: seriously;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 18px;
-    color: black;
+    color: #E1F7F5;
     margin: 10px 20px 15px 20px;/*sup,der,inf,izq*/
 }
 
@@ -58,6 +86,7 @@ main{
 }
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css); 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
 .fa-2x {
 font-size: 2em;
 }
@@ -78,9 +107,11 @@ overflow:visible;
 }
 
 .main-menu {
-background:#212121;
-border-right:1px solid #e5e5e5;
-position:absolute;
+padding: 0;
+margin: 0;
+background:#000035;
+border-right:1px solid #9ab4ff;
+position:fixed;
 top:0;
 bottom:0;
 height:100%;
