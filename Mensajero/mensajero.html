@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario de registro</title>
+</head>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4DAFF6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #4465FB;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+
+<h3>Registro de usuarios</h3>
+
+<div>
+  <form action="mensajero.php" method="post">
+    <label for="nombre">Nombre de Usuario</label>
+    <input type="text" id="nombre" name="nombre" placeholder="User">
+
+    <label for="email">E-mail</label>
+    <input type="text" id="email" name="email" placeholder="Email">
+
+    <label for="mensaje">Comentario</label></br>
+    <textarea id="mensaje" name="mensaje"></textarea>
+  
+    <input type="submit" id="submit" name="submit" value="Enviar formulario">
+  </form>
+</div>
+
+</body>
+</html>
