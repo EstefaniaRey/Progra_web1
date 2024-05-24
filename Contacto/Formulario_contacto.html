@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="Estilos_formu.css">
+  <script type="text/javascript">
+		var vsid = "si27124c92fa346";
+		(function() { 
+		var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+		 vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+		})();
+	</script>
+</head>
+<body>
+  <header>
+    <h1>Contacto</h1>
+  </header>
+  
+  
+<section id="formulario-contacto">
+    <h2>Formulario de Contacto</h2>
+
+    <form action="enviar_correo.php" method="POST">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+
+      <div>
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required>
+      </div>
+
+      <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+      </div>
+
+      <button type="submit">Enviar Mensaje</button>
+    
+    </form>
+</section>
+</body>
+</html> 
